@@ -32,12 +32,12 @@ class Patient:
 # Tkinter setup
 root = tk.Tk()
 #colors
-bg_color = "#57433a"
-heightWeight_co = "#fffaf0"
-result_co = "#dcccc0"
+bg_color = "#FFF3E0"
+heightWeight_co = "#FFAB91"
+result_co = "#d55550"
 
 root.title("BMI Calculator")
-root.geometry("401x401")
+root.geometry("400x400")
 root.resizable(height =False, width=False)
 root.config(bg= bg_color)
 
@@ -52,7 +52,7 @@ def calculate_bmi():
 frame_height = tk.Frame(root, bg = heightWeight_co)
 frame_height.place(x=0, y=20)
 
-Label_height = tk.Label(frame_height, text= "Enter your Height(m)", bg= heightWeight_co, fg= "black", font= "Garamond")
+Label_height = tk.Label(frame_height, text= "Enter your Height(m)", bg= heightWeight_co, fg= "black", font= ("Garamond",14, "roman"))
 Label_height.pack(side=tk.TOP, padx=10, pady=20)
 
 entry_height= tk.Entry(frame_height)
@@ -61,7 +61,7 @@ entry_height.pack(side=tk.BOTTOM, padx=10, pady =20)
 frame_weight= tk.Frame(root, bg= heightWeight_co)
 frame_weight.place(x=210, y=20)
 
-Label_weight = tk.Label(frame_weight, text= "Enter your Weight(kg)", bg= heightWeight_co, fg= "black", font= "Garamond")
+Label_weight = tk.Label(frame_weight, text= "Enter your Weight(kg)", bg= heightWeight_co, fg= "black", font= ("Garamond", 14, "roman"))
 Label_weight.pack(side=tk.TOP,padx=10, pady=20)
 
 entry_weight= tk.Entry(frame_weight)
@@ -70,7 +70,7 @@ entry_weight.pack(side=tk.BOTTOM, padx=10, pady=20)
 button_calculate = tk.Button(root, text= "CALCULATE", command= calculate_bmi, width= 15, height= 2)
 button_calculate.place(x= 140, y=200)
 
-frame_result = tk.Label(root, text= "BMI", bg= result_co, fg= "black", width= 18, height= 2, font= "Garamond")
-frame_result.place(x= 100,y=300)
+frame_result = tk.Label(root, text= "BMI", bg= result_co, fg= "black", width= 30, height= 3, font= ("Garamond", 12))
+frame_result.place(x= 60,y=300)
 
 root.mainloop()
